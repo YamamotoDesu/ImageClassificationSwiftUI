@@ -10,6 +10,10 @@ https://developer.apple.com/jp/machine-learning/models/
 ### Place Model into Project
 <img width="299" alt="ImageClassificationSwiftUI_—_MobileNetV2_と_New_File" src="https://user-images.githubusercontent.com/47273077/209615834-faf7bb0e-bde6-4867-ad7e-64495be8f1f8.png">
 
+### Classfy the image
+
+<img width="454" alt="ImageClassificationSwiftUI_—_MobileNetV2" src="https://user-images.githubusercontent.com/47273077/209619642-eb1cca9c-ac91-4bdb-b5e1-de57b11b2a96.png">
+
 ```swift
  @State private var classficationLabel: String = ""
     
