@@ -1,4 +1,5 @@
 # ImageClassificationSwiftUI
+<img width="300" alt="スクリーンショット 2022-12-27 15 20 52" src="https://user-images.githubusercontent.com/47273077/209620812-1c661526-ac74-421a-97a0-06f4fed881f1.gif">
 
 Core MLモデル  
 https://developer.apple.com/jp/machine-learning/models/
