@@ -15,6 +15,8 @@ https://developer.apple.com/jp/machine-learning/models/
 
 <img width="454" alt="ImageClassificationSwiftUI_—_MobileNetV2" src="https://user-images.githubusercontent.com/47273077/209619642-eb1cca9c-ac91-4bdb-b5e1-de57b11b2a96.png">
 
+<img width="825" alt="スクリーンショット_2022_12_27_15_25" src="https://user-images.githubusercontent.com/47273077/209621386-95cb434d-bf07-44d1-a911-9766d8f37f66.png">
+
 ```swift
  @State private var classficationLabel: String = ""
     
