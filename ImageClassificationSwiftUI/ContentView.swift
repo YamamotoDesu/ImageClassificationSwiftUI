@@ -12,6 +12,35 @@ struct ContentView: View {
     
     let photos = ["banana","tiger","bottle"]
     @State private var currentIndex: Int = 0
+    @State private var classficationLabel: String = ""
+    
+    let model = MobileNetV2()
+    
+    private func performImageClassfication() {
+        
+        let currentImageName = photos[currentIndex]
+        
+        guard let img = UIImage(named: currentImageName),
+              let resizedImage = img.resizeTo(size: CGSize(width: 224, height: 224)),
+              let buffer = resizedImage.toBuffer() else {
+            return
+        }
+        
+        let output = try? model.prediction(image: buffer)
+        
+        if let output = output {
+            
+//            self.classficationLabel = output.classLabel
+            let results = output.classLabelProbs.sorted { $0.value > $1.value }
+            
+            let result = results.map { key, value in
+                return "\(key) = \(value * 100)"
+            }.joined(separator: "\n")
+            
+            classficationLabel = result
+        }
+        
+    }
     
     var body: some View {
         VStack {
@@ -53,12 +82,16 @@ struct ContentView: View {
             Button("Classify") {
                 // classify the image here
                 
+                self.performImageClassfication()
+                
             }.padding()
             .foregroundColor(Color.white)
             .background(Color.green)
             .cornerRadius(8)
             
-            Text("")
+            Text(classficationLabel)
+                .font(.largeTitle)
+                .padding()
         }
     }
 }
