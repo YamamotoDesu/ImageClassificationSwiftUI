@@ -42,3 +42,18 @@ https://developer.apple.com/jp/machine-learning/models/
     }
   
   ```
+  
+### How to classfy Images
+```swift
+  
+             let results = output.classLabelProbs.sorted { $0.value > $1.value }
+            
+          let result = results.map { key, value in
+             return "\(key) = \(value * 100)"
+           }.joined(separator: "\n")
+  ```
+   
+   
+ <img width="372" alt="スクリーンショット_2022_12_27_15_48" src="https://user-images.githubusercontent.com/47273077/209624129-41ea74a0-8bc4-42b8-b1cf-98f95a85b707.png">
+
+  
