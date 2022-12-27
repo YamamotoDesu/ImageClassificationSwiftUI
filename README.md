@@ -1,6 +1,6 @@
 # ImageClassificationSwiftUI
 
-Core MLモデル
+Core MLモデル 
 https://developer.apple.com/jp/machine-learning/models/
 
 ### Download Model
